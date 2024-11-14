@@ -1,0 +1,22 @@
+device: cuda
+seed: 0
+
+Evaluation:
+  test_ratio: 0.5
+  n_eval: 1
+  batch_size: 1800
+  metrics_enabled: [
+    'var',
+    'es',
+    'max_drawback',
+    'cumulative_pnl'
+  ]
+
+  TestMetrics:
+    var:
+      dims: [ 0,2,4,6,8 ]
+      alpha: 0.05
+
+    es:
+      dims: [ 0,2,4,6,8 ]
+      alpha: 0.05
